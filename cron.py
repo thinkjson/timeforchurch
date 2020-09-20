@@ -1,6 +1,6 @@
 import os
 import re
-
+from datetime import datetime
 import requests
 
 script_dir = os.path.dirname(__file__)
@@ -31,6 +31,8 @@ data = """
     <h1>Do I need to wear a mask?</h1>
     <div class="outcome {mask_class}">{mask}</div>
     {mask_info}
+
+    <p>Last updated {updated}</p>
 """.format(
     safe_class="text-warning" if safe else "text-danger",
     is_safe="NO" if not safe else "MAYBE",
@@ -40,6 +42,7 @@ data = """
     mask="YES" if masks else "UNKNOWN",
     mask_class="text-danger" if masks else "text-warning",
     mask_info="<p>Check the <a href='https://floridahealthcovid19.gov/'>Florida Department of Health's COVID-19 response</a> for more information" if not masks else "",
+    updated=datetime.now().strftime("%A, %B %d at %H:%M %p"),
 )
 
 with open(output_file, "w") as f:
