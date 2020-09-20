@@ -1,1 +1,1 @@
-<div>{% include data.html %}</div>
+<div class="text-center">{% include data.html %}</div>
