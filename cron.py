@@ -23,7 +23,7 @@ data = """
     <div class="outcome">{mask}</a>
     {mask_info}
 """.format(
-    safe="safe" if safe else "not-safe",
+    safe="text-warning" if safe else "text-danger",
     is_safe="NO" if not safe else "MAYBE",
     gatherings="The Florida Department of Health recommends refraining from gatherings of more than 10 people" if not gatherings else "",
     crowds="The Florida Department of Health recommends avoiding crowds" if not crowds else "",
