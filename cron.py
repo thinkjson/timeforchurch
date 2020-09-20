@@ -41,7 +41,7 @@ data = """
     crowds="""<div class="alert alert-danger" role="alert">The Florida Department of Health recommends avoiding crowds</div>""" if not crowds else "",
     mask="YES" if masks else "UNKNOWN",
     mask_class="text-danger" if masks else "text-warning",
-    mask_info="<p>Check the <a href='https://floridahealthcovid19.gov/'>Florida Department of Health's COVID-19 response</a> for more information" if not masks else "",
+    mask_info="<p>Check the <a href='https://floridahealthcovid19.gov/'>Florida Department of Health's COVID-19 response</a> for more information" if not masks else """<div class="alert alert-danger" role="alert">The Florida Department of Health recommends wearing a face covering when in public</div>""",
     updated=datetime.now().strftime("%A, %B %d at %H:%M %p"),
 )
 
