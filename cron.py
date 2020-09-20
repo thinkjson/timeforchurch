@@ -38,7 +38,7 @@ data = """
     positivity="""<div class="alert alert-warning" role="alert">Positivity rate of {0}%% is too high</div>""".format(positivity) if not positivity_nominal else "",
     crowds="""<div class="alert alert-warning" role="alert">The Florida Department of Health recommends avoiding crowds</div>""" if not crowds else "",
     mask="YES" if masks else "UNKNOWN",
-    safe_class="text-danger" if masks else "text-warning",
+    mask_class="text-danger" if masks else "text-warning",
     mask_info="<p>Check the <a href='https://floridahealthcovid19.gov/'>Florida Department of Health's COVID-19 response</a> for more information" if not masks else "",
 )
 
