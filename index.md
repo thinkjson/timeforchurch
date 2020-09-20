@@ -1,1 +1,1 @@
-{% include data.html %}
+<div>{% include data.html %}</div>
