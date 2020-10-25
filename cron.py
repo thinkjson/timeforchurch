@@ -59,7 +59,7 @@ data = """
     mask="YES" if masks else "UNKNOWN",
     mask_class="text-success" if masks else "text-warning",
     r0="""<div class="alert alert-danger" role="alert">R0 is greater than 1.0 in the state of Florida</div>""" if masks_r0 > 1.0 else "",
-    mask_info="<p>Check the <a href='https://floridahealthcovid19.gov/prevention/'>Florida Department of Health's COVID-19 response</a> for more information" if not masks_doh else """<div class="alert alert-danger" role="alert">The Florida Department of Health recommends wearing a face covering when in public</div>""",
+    mask_info="<p>Check the <a href='https://floridahealthcovid19.gov/prevention/'>Florida Department of Health's COVID-19 response</a> for more information" if not masks_doh else """<div class="alert alert-info" role="alert">The Florida Department of Health recommends wearing a face covering when in public</div>""",
     updated=datetime.now().strftime("%A, %B %d at %H:%M %p"),
 )
 
